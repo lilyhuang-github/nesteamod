@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "net.lh.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin",
+		"BrewingRecipeRegistryMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

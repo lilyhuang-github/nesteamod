@@ -1,0 +1,9 @@
+{
+  "item.nestea-mod.nestea": "Nestea",
+  "item.nestea-mod.tealeaf": "TeaLeaf",
+
+  "itemgroup.nesteamod": "Nestea Group",
+  "item.minecraft.potion.effect.tea": "Tea",
+  "item.minecraft.slash_potion.effect.tea": "Splash tea",
+  "item.minecraft.lingering_potion.effect.tea": "Strong steeped Tea"
+}

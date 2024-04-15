@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "nestea-mod",
+	"version": "${version}",
+	"name": "Nestea Mod",
+	"description": "Adds in Nestea",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/nestea-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lh.NesteaMod"
+		],
+		"client": [
+			"net.lh.NesteaModClient"
+		],
+		"fabric-datagen": [
+			"net.lh.NesteaModDataGenerator"
+		]
+	},
+	"mixins": [
+		"nestea-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
