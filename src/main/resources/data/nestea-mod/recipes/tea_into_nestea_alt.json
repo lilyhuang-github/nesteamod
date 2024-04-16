@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food_and_drink",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:potion:tea"
+    }
+  ],
+  "result": {
+    "item": "nestea-mod:nestea",
+    "count": 2
+  }
+}

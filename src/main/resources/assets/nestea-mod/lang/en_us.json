@@ -1,6 +1,7 @@
 {
   "item.nestea-mod.nestea": "Nestea",
   "item.nestea-mod.tealeaf": "TeaLeaf",
+  "item.nestea-mod.emptycan": "Empty Can",
 
   "itemgroup.nesteamod": "Nestea Group",
   "item.minecraft.potion.effect.tea": "Tea",

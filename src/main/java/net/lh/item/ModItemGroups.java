@@ -19,6 +19,9 @@ public class ModItemGroups {
                 .icon(() -> new ItemStack(ModItems.Nestea)).entries((displayContext, entries) -> {
                     entries.add(ModItems.TeaLeaf);
                     entries.add(ModItems.Nestea);
+                    entries.add(ModItems.emptyCan);
+//                    entries.add(ModItems.Tea);
+//                    entries.add(teapotion.TEA);
 //                    entries.add(teapotion.Tea);
 
 
