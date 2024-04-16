@@ -20,6 +20,7 @@ public class ModItemGroups {
                     entries.add(ModItems.TeaLeaf);
                     entries.add(ModItems.Nestea);
                     entries.add(ModItems.emptyCan);
+                    entries.add(ModItems.rat);
 //                    entries.add(ModItems.Tea);
 //                    entries.add(teapotion.TEA);
 //                    entries.add(teapotion.Tea);

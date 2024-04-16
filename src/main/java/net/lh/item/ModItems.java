@@ -15,10 +15,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item Nestea = registerItem("nestea", new Item(new FabricItemSettings()));
+    public static final Item Nestea = registerItem("nestea", new Item(new FabricItemSettings().food(ModFoodComponent.nestea)));
     public static final Item TeaLeaf = registerItem("tealeaf", new Item(new FabricItemSettings()));
     public static final Item emptyCan = registerItem("emptycan", new Item(new FabricItemSettings()));
-//    public static final Item Tea = registerItem("Tea", new PotionItem(new FabricItemSettings()));
+    public static final Item rat = registerItem("rat", new Item(new FabricItemSettings()));
+    //    public static final Item Tea = registerItem("Tea", new PotionItem(new FabricItemSettings()));
 //    public static final Item tea = Registry.POTION
 //Potion existingTeaPotion = Registry.POTION.get(new Identifier(NesteaMod.MOD_ID, "tea"));
 //    public static final Item Tea = registerItem("Tea", new PotionItem(new FabricItemSettings().food(teapotion.TEA)));
@@ -27,6 +28,7 @@ public class ModItems {
         entries.add(Nestea);
         entries.add(TeaLeaf);
         entries.add(emptyCan);
+        entries.add(rat);
 //        entries.add(Tea);
 //        entries.add()
 //        entries.add(teapotion.TEA);

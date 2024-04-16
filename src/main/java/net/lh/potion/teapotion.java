@@ -5,6 +5,7 @@ import net.lh.item.ModItems;
 //import net.lh.mixin.BrewingRecipeRegistryAccessor;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.PotionItem;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;
@@ -27,6 +28,7 @@ public class teapotion extends Potion {
     public static void registerPotions(){
        TEA =  registerPotion("tea", new StatusEffectInstance(StatusEffects.SPEED, 100,3));
         registerPotionRecipe();
+
     }
 
 
