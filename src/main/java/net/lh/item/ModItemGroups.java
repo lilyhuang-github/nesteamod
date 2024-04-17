@@ -21,6 +21,10 @@ public class ModItemGroups {
                     entries.add(ModItems.Nestea);
                     entries.add(ModItems.emptyCan);
                     entries.add(ModItems.rat);
+                    entries.add(ModItems.RAT_HELMET);
+                    entries.add(ModItems.RAT_CHESTPLATE);
+                    entries.add(ModItems.RAT_LEGGINGS);
+                    entries.add(ModItems.RAT_BOOTS);
 //                    entries.add(ModItems.Tea);
 //                    entries.add(teapotion.TEA);
 //                    entries.add(teapotion.Tea);

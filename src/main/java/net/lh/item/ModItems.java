@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lh.NesteaMod;
 import net.lh.potion.teapotion;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.PotionItem;
@@ -19,6 +20,13 @@ public class ModItems {
     public static final Item TeaLeaf = registerItem("tealeaf", new Item(new FabricItemSettings()));
     public static final Item emptyCan = registerItem("emptycan", new Item(new FabricItemSettings()));
     public static final Item rat = registerItem("rat", new Item(new FabricItemSettings()));
+
+    public static final Item RAT_HELMET = registerItem("rat_helmet", new ArmorItem(ModArmorMaterials.Rat, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item RAT_CHESTPLATE = registerItem("rat_chestplate", new ArmorItem(ModArmorMaterials.Rat, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item RAT_LEGGINGS = registerItem("rat_leggings", new ArmorItem(ModArmorMaterials.Rat, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item RAT_BOOTS = registerItem("rat_boots", new ArmorItem(ModArmorMaterials.Rat, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+
     //    public static final Item Tea = registerItem("Tea", new PotionItem(new FabricItemSettings()));
 //    public static final Item tea = Registry.POTION
 //Potion existingTeaPotion = Registry.POTION.get(new Identifier(NesteaMod.MOD_ID, "tea"));
@@ -29,6 +37,7 @@ public class ModItems {
         entries.add(TeaLeaf);
         entries.add(emptyCan);
         entries.add(rat);
+
 //        entries.add(Tea);
 //        entries.add()
 //        entries.add(teapotion.TEA);

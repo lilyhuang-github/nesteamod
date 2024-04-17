@@ -3,6 +3,11 @@
   "item.nestea-mod.tealeaf": "TeaLeaf",
   "item.nestea-mod.emptycan": "Empty Can",
   "item.nestea-mod.rat": "Rat",
+  "item.nestea-mod.rat_helmet": "Rat Helmet",
+  "item.nestea-mod.rat_chestplate": "Rat Chestplate",
+  "item.nestea-mod.rat_leggings": "Rat Leggings",
+  "item.nestea-mod.rat_boots": "Rat Boots",
+
 
   "itemgroup.nesteamod": "Nestea Group",
   "item.minecraft.potion.effect.tea": "Tea",
