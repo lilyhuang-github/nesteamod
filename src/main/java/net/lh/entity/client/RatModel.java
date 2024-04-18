@@ -3,45 +3,62 @@ package net.lh.entity.client;
 import net.lh.entity.custom.RatEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
 
 // Made with Blockbench 4.9.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
 public class RatModel<T extends RatEntity> extends SinglePartEntityModel<T> {
-	private final ModelPart bone;
-	private final ModelPart bb_main;
+	private final ModelPart legs;
+	private final ModelPart rat;
+	private final ModelPart head;
 
 	public RatModel(ModelPart root) {
-		this.bone = root.getChild("bone");
-		this.bb_main = root.getChild("bb_main");
+		this.legs = root.getChild("legs");
+		this.rat = root.getChild("rat");
+		this.head = rat.getChild("head");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(0, 1).cuboid(-1.0F, 0.0F, -2.0F, 3.0F, 0.0F, 1.0F, new Dilation(0.0F))
-		.uv(0, 0).cuboid(-1.0F, 0.0F, 1.0F, 3.0F, 0.0F, 1.0F, new Dilation(0.0F))
-		.uv(0, 2).cuboid(1.0F, 0.0F, -2.0F, 3.0F, 0.0F, 1.0F, new Dilation(0.0F))
-		.uv(0, 3).cuboid(1.0F, 0.0F, 1.0F, 3.0F, 0.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-2.0F, 24.0F, 0.0F));
+		ModelPartData legs = modelPartData.addChild("legs", ModelPartBuilder.create().uv(25, 18).cuboid(-6.0F, -3.0F, 4.0F, 4.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 0).cuboid(2.0F, -3.0F, -7.0F, 4.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 4).cuboid(-6.0F, -3.0F, -7.0F, 4.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 8).cuboid(2.0F, -3.0F, 4.0F, 4.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
-		ModelPartData bb_main = modelPartData.addChild("bb_main", ModelPartBuilder.create().uv(0, 0).cuboid(-1.0F, -1.0F, -5.0F, 2.0F, 1.0F, 8.0F, new Dilation(0.0F))
-		.uv(0, 0).cuboid(0.0F, -1.0F, 2.0F, 0.0F, 1.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
-		return TexturedModelData.of(modelData, 32, 32);
+		ModelPartData toes = legs.addChild("toes", ModelPartBuilder.create().uv(0, 29).cuboid(-6.0F, -1.0F, 3.0F, 4.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(24, 26).cuboid(2.0F, -1.0F, 3.0F, 4.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(12, 26).cuboid(2.0F, -1.0F, -8.0F, 4.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 26).cuboid(-6.0F, -1.0F, -8.0F, 4.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
+		ModelPartData rat = modelPartData.addChild("rat", ModelPartBuilder.create().uv(0, 0).cuboid(-6.0F, -7.0F, -8.0F, 12.0F, 4.0F, 14.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
+
+		ModelPartData head = rat.addChild("head", ModelPartBuilder.create().uv(0, 18).cuboid(2.0F, -8.0F, -10.0F, 2.0F, 3.0F, 0.0F, new Dilation(0.0F))
+		.uv(8, 32).cuboid(-4.0F, -8.0F, -10.0F, 2.0F, 3.0F, 0.0F, new Dilation(0.0F))
+		.uv(0, 18).cuboid(-5.0F, -6.0F, -12.0F, 10.0F, 3.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
+		ModelPartData tail = rat.addChild("tail", ModelPartBuilder.create().uv(12, 29).cuboid(-1.0F, -6.0F, 13.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(20, 29).cuboid(-1.0F, -6.0F, 11.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(28, 29).cuboid(-1.0F, -6.0F, 9.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(30, 22).cuboid(-1.0F, -6.0F, 7.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 32).cuboid(-1.0F, -6.0F, 5.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		return TexturedModelData.of(modelData, 64, 64);
 	}
-	@Override
-	public void setAngles(RatEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	}
+
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		bone.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
-		bb_main.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		legs.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		rat.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return bb_main;
+		return rat;
+	}
+
+	@Override
+	public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+
 	}
 }

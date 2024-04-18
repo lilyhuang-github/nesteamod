@@ -2,7 +2,11 @@ package net.lh;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.lh.entity.ModEntities;
+import net.lh.entity.custom.RatEntity;
 import net.lh.item.ModItems;
+import net.minecraft.entity.mob.MobEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +23,7 @@ public class NesteaMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModItems.registerModItems();
+		FabricDefaultAttributeRegistry.register(ModEntities.Rat, RatEntity.createRatAttribute());
 //		LOGGER.info("Hello Fabric world!");
 	}
 }
