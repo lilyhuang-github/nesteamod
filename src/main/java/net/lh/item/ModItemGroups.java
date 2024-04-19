@@ -25,6 +25,7 @@ public class ModItemGroups {
                     entries.add(ModItems.RAT_CHESTPLATE);
                     entries.add(ModItems.RAT_LEGGINGS);
                     entries.add(ModItems.RAT_BOOTS);
+                    entries.add(ModItems.RAT_SPAWN_EGG);
 //                    entries.add(ModItems.Tea);
 //                    entries.add(teapotion.TEA);
 //                    entries.add(teapotion.Tea);

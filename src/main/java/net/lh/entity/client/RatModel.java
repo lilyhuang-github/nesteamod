@@ -1,10 +1,12 @@
 package net.lh.entity.client;
 
+import net.lh.entity.animation.ModAnimations;
 import net.lh.entity.custom.RatEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.math.MathHelper;
 
 // Made with Blockbench 4.9.4
 // Exported for Minecraft version 1.17+ for Yarn
@@ -59,6 +61,18 @@ public class RatModel<T extends RatEntity> extends SinglePartEntityModel<T> {
 
 	@Override
 	public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+		this.getPart().traverse().forEach(ModelPart::resetTransform);
+		this.setHeadAngles(headYaw, headPitch);
 
+		this.animateMovement(ModAnimations.WALK, limbAngle, limbDistance, 2f, 2.5f);
+		this.updateAnimation(entity.idleAnimationState, ModAnimations.IDLE, animationProgress,1f );
+	}
+
+	private void setHeadAngles(float headYaw, float headPitch){
+		headYaw = MathHelper.clamp(headYaw, -30.F, 30.0F);
+		headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
+
+		this.head.yaw = headYaw * 0.017453292F;
+		this.head.pitch = headPitch * 0.017453292F;
 	}
 }

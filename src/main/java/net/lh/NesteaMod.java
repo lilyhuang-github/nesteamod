@@ -24,6 +24,7 @@ public class NesteaMod implements ModInitializer {
 		// Proceed with mild caution.
 		ModItems.registerModItems();
 		FabricDefaultAttributeRegistry.register(ModEntities.Rat, RatEntity.createRatAttribute());
+		ModEntities.registerModEntities();
 //		LOGGER.info("Hello Fabric world!");
 	}
 }

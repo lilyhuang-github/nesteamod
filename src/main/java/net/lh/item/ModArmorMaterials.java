@@ -11,8 +11,8 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    Rat("rat", 25,new int[]{3,8,6,3}, 19, SoundEvents.BLOCK_ANVIL_FALL,
-2f, 0.1f, ()-> Ingredient.ofItems(ModItems.rat)
+    Rat("rat", 15,new int[]{2,6,4,2}, 19, SoundEvents.BLOCK_ANVIL_FALL,
+6f, 3.0f, ()-> Ingredient.ofItems(ModItems.rat)
             );
 
 //    Nestea("nestea", 25, new int[]{3,8,6,3}
