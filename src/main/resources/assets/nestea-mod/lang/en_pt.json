@@ -1,0 +1,17 @@
+{
+  "item.nestea-mod.nestea": "Ye old mead",
+  "item.nestea-mod.tealeaf": "Mead leafs",
+  "item.nestea-mod.emptycan": "Mead Can",
+  "item.nestea-mod.rat": "Wheevil",
+  "item.nestea-mod.rat_helmet": "Wheevil Helmet",
+  "item.nestea-mod.rat_chestplate": "Wheevil Chestplate",
+  "item.nestea-mod.rat_leggings": "Wheevil Leggings",
+  "item.nestea-mod.rat_boots": "Wheevil Boots",
+
+  "item.nestea-mod.rat_spawn_egg": "Wheevil Spawn Egg",
+
+  "itemgroup.nesteamod": "Mead Group",
+  "item.minecraft.potion.effect.tea": "Mead",
+  "item.minecraft.slash_potion.effect.tea": "Splash mead",
+  "item.minecraft.lingering_potion.effect.tea": "Strong steeped mead"
+}

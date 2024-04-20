@@ -1,0 +1,17 @@
+{
+  "item.nestea-mod.nestea": "Meows tea",
+  "item.nestea-mod.tealeaf": "Meafleafs",
+  "item.nestea-mod.emptycan": "Meowty Can",
+  "item.nestea-mod.rat": "Rat RAT RAT",
+  "item.nestea-mod.rat_helmet": "RatRATRAT Helmt",
+  "item.nestea-mod.rat_chestplate": "RatRATAAT Chstplte",
+  "item.nestea-mod.rat_leggings": "RatRARAT Leging",
+  "item.nestea-mod.rat_boots": "RatRARARART Booots",
+
+  "item.nestea-mod.rat_spawn_egg": "Rat Spawn Egg",
+
+  "itemgroup.nesteamod": "Newstea Group",
+  "item.minecraft.potion.effect.tea": "Tea",
+  "item.minecraft.slash_potion.effect.tea": "Splash tea",
+  "item.minecraft.lingering_potion.effect.tea": "Strong steeped Tea"
+}
