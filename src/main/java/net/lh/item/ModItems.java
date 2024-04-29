@@ -22,7 +22,8 @@ public class ModItems {
 //    public static final Item Nestea =  registerItem("nestea", new Item(new FabricItemSettings().food(ModFoodComponent.nestea)));
     public static final Item TeaLeaf = registerItem("tealeaf", new Item(new FabricItemSettings()));
     public static final Item emptyCan = registerItem("emptycan", new Item(new FabricItemSettings()));
-    public static final Item rat = registerItem("rat", new Item(new FabricItemSettings()));
+//    public static final Item rat = registerItem("rat", new Item(new FabricItemSettings()));
+    public static final Item rat = registerItem("rat", new RatItem());
 //    public static final Item rat = registerItem("rat", new rat(new FabricItemSettings()));
 
 

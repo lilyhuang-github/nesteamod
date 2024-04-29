@@ -6,6 +6,7 @@ import net.lh.entity.custom.RatEntity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.passive.RabbitEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -18,6 +19,12 @@ public class ModEntities {
             new Identifier(NesteaMod.MOD_ID, "rat"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RatEntity::new)
                             .dimensions(EntityDimensions.fixed(1f, 1f)).build());
+
+//    public static final EntityType<RabbitEntity> RABBIT =
+//    EntityType.register("rabbit",
+//    EntityType.Builder.create(RabbitEntity::new, SpawnGroup.CREATURE).
+//    setDimensions(0.4f, 0.5f).
+//    maxTrackingRange(8));
 
 //    public static final EntityType<RatEntity> Rat = Registry.register(Registries.ENTITY_TYPE,
 //            new Identifier(NesteaMod.MOD_ID, "rat"),
