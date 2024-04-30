@@ -1,23 +1,8 @@
 package net.lh.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.lh.NesteaMod;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.Spawner;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
+
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
-import net.lh.entity.custom.RatEntity;
-import net.minecraft.world.event.GameEvent;
 
 public class RatItem extends Item {
     public RatItem(){
