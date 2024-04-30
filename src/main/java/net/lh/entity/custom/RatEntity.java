@@ -25,6 +25,11 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+
+
+/*
+STANDARD RAT ENTITY
+ */
 public class RatEntity extends AnimalEntity {
     public RatEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -89,18 +94,6 @@ public class RatEntity extends AnimalEntity {
     protected void drop(DamageSource source) {
         dropXp();
         dropItem(ModItems.rat);
-    }
-
-    @Override
-    public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.isOf(ModItems.emptyCan) && !this.isBaby()) {
-            player.playSound(SoundEvents.ENTITY_COW_MILK, 1.0f, 1.0f);
-            ItemStack itemStack2 = ItemUsage.exchangeStack(itemStack, player, ModItems.Nestea.getDefaultStack());
-            player.setStackInHand(hand, itemStack2);
-            return ActionResult.success(this.getWorld().isClient);
-        }
-        return super.interactMob(player, hand);
     }
 
     @Nullable

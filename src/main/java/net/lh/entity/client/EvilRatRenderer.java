@@ -8,17 +8,17 @@ import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
-public class RatRenderer extends MobEntityRenderer<RatEntity, RatModel<RatEntity>> {
+public class EvilRatRenderer extends MobEntityRenderer<RatEntity, RatModel<RatEntity>> {
 //    private static final Identifier TEXTURE = new Identifier(NesteaMod.MOD_ID, "textures/entity/rat_mob.png");
-//    public static String location = "textures/entity/";
-    public static final Identifier TEXTURE = new Identifier(NesteaMod.MOD_ID, "textures/entity/rat_mob.png");
+    public static String location = "textures/entity/";
+    public static final Identifier TEXTURE = new Identifier(NesteaMod.MOD_ID, "textures/entity/evil_rat_mob.png");
 //    public void setLocation(String path){
 //        TEXTURE = new Identifier(NesteaMod.MOD_ID, "textures/entity/" + path);
 //
 //
 //    }
 
-    public RatRenderer(EntityRendererFactory.Context context) {
+    public EvilRatRenderer(EntityRendererFactory.Context context) {
         super(context, new RatModel<>(context.getPart(ModModelLayers.RAT)), 0.f);
 //        setLocation(texture);
     }

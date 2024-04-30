@@ -4,9 +4,11 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.lh.entity.ModEntities;
+import net.lh.entity.custom.EvilRatEntity;
+import net.lh.entity.custom.NesteaRat;
 import net.lh.entity.custom.RatEntity;
 import net.lh.item.ModItems;
-import net.minecraft.entity.mob.MobEntity;
+import net.lh.world.gen.ModEntitySpawn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +26,11 @@ public class NesteaMod implements ModInitializer {
 		// Proceed with mild caution.
 		ModItems.registerModItems();
 		FabricDefaultAttributeRegistry.register(ModEntities.Rat, RatEntity.createRatAttribute());
+		FabricDefaultAttributeRegistry.register(ModEntities.NesteaRat, NesteaRat.createRatAttribute());
+		FabricDefaultAttributeRegistry.register(ModEntities.HostileRat, EvilRatEntity.createRatAttribute());
 		ModEntities.registerModEntities();
+//		ModEntitySpawn.addEntitySpawns();
+//		ModEntitySpawn.addEntitySpawns();
 //		LOGGER.info("Hello Fabric world!");
 	}
 }
