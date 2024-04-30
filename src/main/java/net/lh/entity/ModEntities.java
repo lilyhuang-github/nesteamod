@@ -47,6 +47,12 @@ public class ModEntities {
 //    setDimensions(0.4f, 0.5f).
 //    maxTrackingRange(8));
 
+//    public static final EntityType<RabbitEntity> RABBIT =
+//    EntityType.register("rabbit",
+//    EntityType.Builder.create(RabbitEntity::new, SpawnGroup.CREATURE).
+//    setDimensions(0.4f, 0.5f).
+//    maxTrackingRange(8));
+
 //    public static final EntityType<RatEntity> Rat = Registry.register(Registries.ENTITY_TYPE,
 //            new Identifier(NesteaMod.MOD_ID, "rat"),
 //            EntityType.Builder.create(EntityType.Builder(RatEntity::new)., SpawnGroup.CREATURE)
